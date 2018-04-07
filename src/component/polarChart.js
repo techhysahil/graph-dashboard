@@ -12,7 +12,7 @@ class PolarChart extends Component {
   	}
   	
     return (
-      <div className={"chart-wrapper"+" "+(className)}>
+      <div className={"chart-wrapper "+className}>
         <div className="chart-title">Polar Chart</div>
         <Polar data={polarChart} />
       </div>

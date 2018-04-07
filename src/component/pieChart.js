@@ -12,7 +12,7 @@ class PieChart extends Component {
   	}
   	
     return (
-      <div className={"chart-wrapper"+" "+(className)}>
+      <div className={"chart-wrapper "+className}>
         <div className="chart-title">Pie Chart</div>
         <Pie data={pieChart.data} options={pieChart.options} />
       </div>

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import {Pie,Bar,Line,Polar} from 'react-chartjs-2';
-
 import PieChart from './component/pieChart.js';
 import LineChart from './component/lineChart.js';
 import BarChart from './component/barChart.js';
 import PolarChart from './component/polarChart.js';
+import graphConfig from './graphConfig.json';
 
 import './App.css';
 
@@ -13,24 +12,7 @@ class App extends Component {
     // super gives us our context for 'this'
     super(props);
     this.state = {
-      chartConfig : [
-        {
-          type : "lineChart",
-          width : 50,
-        },
-        {
-          type : "barChart",
-          width : 50,
-        },
-        {
-          type : "polarChart",
-          width : 100,
-        },
-        {
-          type : "pieChart",
-          width : 100,
-        }
-      ]
+      chartConfig : graphConfig
     }
     this.renderCharts = this.renderCharts.bind(this);
   }
@@ -40,16 +22,13 @@ class App extends Component {
         this.state.chartConfig.map((item,index) => {
           switch (item.type) {
               case "pieChart":
-                return  <PieChart width={item.width} />
-                  break;
+                return  <PieChart key={"PieChart"+index} width={item.width} />
               case "barChart":
-                return  <BarChart width={item.width} />
-                  break;
+                return  <BarChart key={"PieChart"+index} width={item.width} />
               case "polarChart":
-                 return <PolarChart width={item.width} />
-                  break;
+                 return <PolarChart key={"PieChart"+index} width={item.width} />
               case "lineChart":
-                return  <LineChart width={item.width} />
+                return  <LineChart key={"PieChart"+index} width={item.width} />
           }
         })    
       )

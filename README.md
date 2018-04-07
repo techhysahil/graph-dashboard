@@ -10,3 +10,5 @@ npm run start
 ``` 
   Above command will execute app in http://localhost:3000/. 
 
+3. Now you can change "graphConfig.json" to change graph config.
+

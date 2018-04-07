@@ -12,7 +12,7 @@ class LineChart extends Component {
   	}
   	
     return (
-      <div className={"chart-wrapper"+" "+(className)}>
+      <div className={"chart-wrapper "+className}>
         <div className="chart-title">Line Chart</div>
         <Line data={linechart} />
       </div>

@@ -12,10 +12,10 @@ class BarChart extends Component {
   	}
 
     return (
-      <div className={"chart-wrapper"+" "+(className)}>
-	    <div className="chart-title">Bar Chart</div>
-	    <Bar data={barChart.data} options={barChart.options} />
-	  </div>
+      <div className={"chart-wrapper "+className}>
+  	    <div className="chart-title">Bar Chart</div>
+  	    <Bar data={barChart.data} options={barChart.options} />
+  	  </div>
     );
   }
 }
