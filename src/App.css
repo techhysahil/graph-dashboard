@@ -8,11 +8,17 @@ body {
 /*Chart style*/
 .chart-wrapper{
   display: inline-block;
-  width: 48%;
+  
   float: left;
   margin-bottom: 50px;
 }
-.chart-wrapper.left{
+.chart-wrapper.halfWidth{
+  width: 48%;
+}
+.chart-wrapper.fullWidth{
+  width: 100%;
+}
+.chart-wrapper:nth-child(2n-1){
   margin-right: 4%;
 }
 .chart-wrapper .chart-title{
