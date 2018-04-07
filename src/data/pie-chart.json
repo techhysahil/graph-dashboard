@@ -1,0 +1,31 @@
+{
+  "data": {
+    "labels": [
+      "Gentian",
+      "Alice",
+      "Alex"
+    ],
+    "datasets": [
+      {
+        "data": [
+          2,
+          5,
+          11
+        ],
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
+        ]
+      }
+    ]
+  },
+  "options": {
+    "title": {
+      "display": true,
+      "text": "Chore Distribution for this Month",
+      "fontFamily": "Roboto",
+      "fontSize": 20
+    }
+  }
+}
