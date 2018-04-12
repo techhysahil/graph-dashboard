@@ -22,13 +22,13 @@ class App extends Component {
         this.state.chartConfig.map((item,index) => {
           switch (item.type) {
               case "pieChart":
-                return  <PieChart key={"PieChart"+index} width={item.width} />
+                return  <PieChart key={"PieChart"+index} layout={item.layout} />
               case "barChart":
-                return  <BarChart key={"PieChart"+index} width={item.width} />
+                return  <BarChart key={"BarChart"+index} layout={item.layout} />
               case "polarChart":
-                 return <PolarChart key={"PieChart"+index} width={item.width} />
+                 return <PolarChart key={"PolarChart"+index} layout={item.layout} />
               case "lineChart":
-                return  <LineChart key={"PieChart"+index} width={item.width} />
+                return  <LineChart key={"LineChart"+index} layout={item.layout} />
           }
         })    
       )

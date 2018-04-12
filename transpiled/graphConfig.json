@@ -1,0 +1,18 @@
+[
+  {
+    "type": "lineChart",
+    "width": 50
+  },
+  {
+    "type": "barChart",
+    "width": 50
+  },
+  {
+    "type": "polarChart",
+    "width": 100
+  },
+  {
+    "type": "pieChart",
+    "width": 100
+  }
+]

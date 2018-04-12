@@ -5,9 +5,9 @@ import barChart from './../data/bar-chart.json';
 class BarChart extends Component {
   render() {
   	var className = "";
-  	if(this.props.width === 100){
+  	if(this.props.layout === "fullwidth"){
   		className = "fullWidth"
-  	}else if(this.props.width === 50){
+  	}else if(this.props.layout === "halfwidth"){
   		className = "halfWidth"
   	}
 
