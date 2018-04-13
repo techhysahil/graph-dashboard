@@ -5,10 +5,10 @@ npm install
 ``` 
   
 2. Run project
+First make production ready files using CRA and finally start node server for SSR
 ```javascript
+npm run build
 npm run start:prod
 ``` 
   Above command will execute app in http://localhost:7777/ 
-
-3. Now you can change "graphConfig.json" to change graph config.
 
