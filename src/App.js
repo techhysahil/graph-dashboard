@@ -3,7 +3,7 @@ import PieChart from './component/pieChart.js';
 import LineChart from './component/lineChart.js';
 import BarChart from './component/barChart.js';
 import PolarChart from './component/polarChart.js';
-import graphConfig from './graphConfig.json';
+// import graphConfig from './graphConfig.json';
 
 import './App.css';
 
@@ -18,9 +18,9 @@ class App extends Component {
   }
 
   componentDidMount(){
-    window.addEventListener('addNewGraph', (event) => {
+    window.addEventListener('updateGraphData', (event) => {
       this.setState({
-        chartConfig : [...this.state.chartConfig,event.detail]
+        chartConfig : event.detail
       })
     }, false);
   }
