@@ -12,9 +12,17 @@ class App extends Component {
     // super gives us our context for 'this'
     super(props);
     this.state = {
-      chartConfig : graphConfig
+      chartConfig : window.GRAPH_INTERFACE.data
     }
     this.renderCharts = this.renderCharts.bind(this);
+  }
+
+  componentDidMount(){
+    window.addEventListener('addNewGraph', (event) => {
+      this.setState({
+        chartConfig : [...this.state.chartConfig,event.detail]
+      })
+    }, false);
   }
 
   renderCharts(){
@@ -22,13 +30,13 @@ class App extends Component {
         this.state.chartConfig.map((item,index) => {
           switch (item.type) {
               case "pieChart":
-                return  <PieChart key={"PieChart"+index} layout={item.layout} />
+                return  <PieChart key={"PieChart"+index} data={item} />
               case "barChart":
-                return  <BarChart key={"BarChart"+index} layout={item.layout} />
+                return  <BarChart key={"BarChart"+index} data={item} />
               case "polarChart":
-                 return <PolarChart key={"PolarChart"+index} layout={item.layout} />
+                 return <PolarChart key={"PolarChart"+index} data={item} />
               case "lineChart":
-                return  <LineChart key={"LineChart"+index} layout={item.layout} />
+                return  <LineChart key={"LineChart"+index} data={item} />
           }
         })    
       )

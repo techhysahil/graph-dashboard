@@ -5,15 +5,15 @@ import polarChart from './../data/polar-chart.json';
 class PolarChart extends Component {
   render() {
   	var className = "";
-    if(this.props.layout === "fullwidth"){
+    if(this.props.data.layout === "fullwidth"){
       className = "fullWidth"
-    }else if(this.props.layout === "halfwidth"){
+    }else if(this.props.data.layout === "halfwidth"){
       className = "halfWidth"
     }
   	
     return (
       <div className={"chart-wrapper "+className}>
-        <div className="chart-title">Polar Chart</div>
+        <div className="chart-title">{this.props.data.title}</div>
         <Polar data={polarChart} />
       </div>
     );
